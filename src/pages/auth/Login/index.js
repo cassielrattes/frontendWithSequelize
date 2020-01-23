@@ -1,13 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./styles.css";
 
 const Login = () => {
   return (
     <div className="login-dark">
-      <form method="post">
+      <form>
         <h2 className="sr-only">Login Form</h2>
         <div className="illustration">
-          <i class="fa fa-password fa-4x"></i>
+          <i class="fa fa-lock"></i>
         </div>
         <div className="form-group">
           <input
@@ -27,12 +29,12 @@ const Login = () => {
         </div>
         <div className="form-group">
           <button className="btn btn-primary btn-block" type="submit">
-            Log In
+            <strong>Sign</strong>In
           </button>
         </div>
-        <a href="#" className="forgot">
+        <Link to="/" className="forgot">
           Forgot your email or password?
-        </a>
+        </Link>
       </form>
     </div>
   );

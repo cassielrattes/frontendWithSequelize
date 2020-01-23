@@ -1,63 +1,47 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            Company Name
-          </a>
+      <nav className="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <div className="container">
+          <Link className="navbar-brand" to="/">
+            Gustavo's Company
+          </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             data-toggle="collapse"
             data-target="#navcol-1"
           >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
+            <span className="sr-only">Toggle navigation</span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav mr-auto">
-              <li class="nav-item" role="presentation">
-                <a class="nav-link active" href="#">
-                  First Item
-                </a>
+          <div className="collapse navbar-collapse" id="navcol-1">
+            <ul className="nav navbar-nav mr-auto">
+              <li className="nav-item" role="presentation">
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
               </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" href="#">
-                  Second Item
-                </a>
-              </li>
-              <li class="dropdown nav-item">
-                <a
-                  class="dropdown-toggle nav-link"
-                  data-toggle="dropdown"
-                  aria-expanded="false"
-                  href="#"
-                >
-                  Dropdown{" "}
-                </a>
-                <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" role="presentation" href="#">
-                    First Item
-                  </a>
-                  <a class="dropdown-item" role="presentation" href="#">
-                    Second Item
-                  </a>
-                  <a class="dropdown-item" role="presentation" href="#">
-                    Third Item
-                  </a>
-                </div>
+              <li className="nav-item" role="presentation">
+                <Link className="nav-link" to="/dashboard">
+                  Dashboard
+                </Link>
               </li>
             </ul>
-            <span class="navbar-text actions">
-              <a href="#" class="login">
-                Log In
-              </a>
-              <a class="btn btn-light action-button" role="button" href="#">
+            <span className="navbar-text actions">
+              <Link to="/login" className="login">
+                Sign In
+              </Link>
+              <Link
+                className="btn btn-light action-button"
+                role="button"
+                to="/register"
+              >
                 Sign Up
-              </a>
+              </Link>
             </span>
           </div>
         </div>

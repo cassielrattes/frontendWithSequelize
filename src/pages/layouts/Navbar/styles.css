@@ -64,17 +64,7 @@
   background-color: #fff;
   border-radius: 2px;
 }
-.navigation-clean-button .dropdown-menu .dropdown-item,
-.navigation-clean-button .dropdown-menu .dropdown-item:focus {
-  line-height: 2;
-  font-size: 14px;
-  color: #37434d;
-}
-.navigation-clean-button .dropdown-menu .dropdown-item:focus,
-.navigation-clean-button .dropdown-menu .dropdown-item:hover {
-  background: #eee;
-  color: inherit;
-}
+
 .navigation-clean-button .actions .login {
   margin-right: 1rem;
   text-decoration: none;

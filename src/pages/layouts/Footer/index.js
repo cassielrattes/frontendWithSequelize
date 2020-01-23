@@ -1,41 +1,43 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./styles.css";
 
 const Footer = () => {
   return (
-    <div class="footer-dark">
+    <div className="footer-dark">
       <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-3 item">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 col-md-3 item">
               <h3>Services</h3>
               <ul>
                 <li>
-                  <a href="#">Web design</a>
+                  <Link to="/">Web design</Link>
                 </li>
                 <li>
-                  <a href="#">Development</a>
+                  <Link to="/">Development</Link>
                 </li>
                 <li>
-                  <a href="#">Hosting</a>
+                  <Link to="/">Hosting</Link>
                 </li>
               </ul>
             </div>
-            <div class="col-sm-6 col-md-3 item">
+            <div className="col-sm-6 col-md-3 item">
               <h3>About</h3>
               <ul>
                 <li>
-                  <a href="#">Company</a>
+                  <Link to="/">Company</Link>
                 </li>
                 <li>
-                  <a href="#">Team</a>
+                  <Link to="/">Team</Link>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <Link to="/">Careers</Link>
                 </li>
               </ul>
             </div>
-            <div class="col-md-6 item text">
+            <div className="col-md-6 item text">
               <h3>Company Name</h3>
               <p>
                 Praesent sed lobortis mi. Suspendisse vel placerat ligula.
@@ -44,22 +46,22 @@ const Footer = () => {
                 in justo.
               </p>
             </div>
-            <div class="col item social">
-              <a href="#">
-                <i class="icon ion-social-facebook"></i>
-              </a>
-              <a href="#">
-                <i class="icon ion-social-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="icon ion-social-snapchat"></i>
-              </a>
-              <a href="#">
-                <i class="icon ion-social-instagram"></i>
-              </a>
+            <div className="col item social">
+              <Link to="/">
+                <i className="fab fa-facebook-f"></i>
+              </Link>
+              <Link to="/">
+                <i className="fab fa-twitter"></i>
+              </Link>
+              <Link to="/">
+                <i className="fab fa-snapchat-ghost"></i>
+              </Link>
+              <Link to="/">
+                <i className="fab fa-instagram"></i>
+              </Link>
             </div>
           </div>
-          <p class="copyright">Company Name © 2017</p>
+          <p className="copyright">Company Name © 2017</p>
         </div>
       </footer>
     </div>
