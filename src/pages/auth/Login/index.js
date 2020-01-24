@@ -39,6 +39,7 @@ class Login extends Component {
           <div className="illustration">
             <i class="fa fa-lock"></i>
           </div>
+          {this.state.error && <p>{this.state.error}</p>}
           <div className="form-group">
             <input
               className="form-control"
