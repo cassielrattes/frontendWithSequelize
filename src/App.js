@@ -1,5 +1,11 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import { isAuthenticated } from "./services/auth";
 
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
@@ -9,6 +15,21 @@ import Dashboard from "./pages/layouts/Dashboard";
 
 import "./global.css";
 
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={props =>
+      isAuthenticated() ? (
+        <Component {...props} />
+      ) : (
+        <Redirect
+          to={{ pathname: "/login", state: { from: props.location } }}
+        />
+      )
+    }
+  />
+);
+
 const App = () => {
   return (
     <Fragment>
@@ -17,7 +38,7 @@ const App = () => {
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
         </Switch>
         <Footer />
       </Router>
