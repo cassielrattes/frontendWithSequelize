@@ -4,6 +4,11 @@ import "./styles.css";
 import { isAuthenticated, logout } from "../../../services/auth";
 
 const Navbar = () => {
+  async function sair() {
+    logout();
+    window.location.reload();
+  }
+
   const authLinks = (
     <ul className="nav navbar-nav ml-auto">
       <li className="nav-item" role="presentation">
@@ -13,7 +18,7 @@ const Navbar = () => {
         </Link>
       </li>
       <li className="nav-item" role="presentation">
-        <a className="nav-link" onClick={logout} href="#!">
+        <a className="nav-link" onClick={sair} href="#!">
           <i className="fas fa-sign-out-alt"></i>{" "}
           <span className="hide-sm">Logout</span>
         </a>
