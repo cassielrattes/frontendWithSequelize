@@ -16,12 +16,14 @@ const Dashboard = () => {
 
   return (
     <>
-      <table className="table table-dark">
+      <table className="table table-dark container">
         <thead>
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
           </tr>
         </thead>
         <tbody>
