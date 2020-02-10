@@ -9,11 +9,11 @@ function DashboardItem({ user }) {
     window.location.reload();
   }
 
-  async function handleUpdate(data) {
-    await api.get(`/users/${data}`);
-    console.log(data);
-    // window.location.reload();
-  }
+  // async function handleUpdate(data) {
+  //   await api.get(`/users/${data}`);
+  //   console.log(data);
+  //   window.location.reload();
+  // }
 
   return (
     <tr>
@@ -34,7 +34,7 @@ function DashboardItem({ user }) {
           type="button"
           className="btn btn-outline-warning"
           to={`/dashboard/user/${user.id}`}
-          onClick={handleUpdate.bind(this, user.id)}
+          // onClick={handleUpdate.bind(this, user.id)}
         >
           Update
         </Link>

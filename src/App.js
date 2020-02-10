@@ -10,7 +10,7 @@ import { isAuthenticated } from "./services/auth";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Navbar from "./pages/layouts/Navbar";
-import Footer from "./pages/layouts/Footer";
+// import Footer from "./pages/layouts/Footer";
 import Dashboard from "./pages/layouts/Dashboard";
 
 import "./global.css";
@@ -42,11 +42,11 @@ const App = () => {
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute
             exact
-            path="/dashboard/user/:id"
+            path={`/dashboard/user/:id`}
             component={DashboardUser}
           />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </Fragment>
   );
