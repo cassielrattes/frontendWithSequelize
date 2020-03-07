@@ -19,7 +19,7 @@ const Register = ({ history }) => {
         history.push("/login");
       } catch (err) {
         console.log(err);
-        alert("tmj");
+        alert("tmj2");
       }
     }
   }

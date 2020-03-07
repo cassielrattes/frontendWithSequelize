@@ -12,12 +12,13 @@ const Login = ({ history }) => {
   async function handleSignIn(e) {
     e.preventDefault();
     if (!email || !password) {
-      alert("tmj");
+      alert("nois");
     } else {
       try {
         const response = await api.post("/sessions", { email, password });
         login(response.data.token);
         history.push("/dashboard");
+        window.location.reload();
       } catch (err) {
         alert("tmj");
       }
@@ -29,7 +30,7 @@ const Login = ({ history }) => {
       <form onSubmit={handleSignIn}>
         <h2 className="sr-only">Login Form</h2>
         <div className="illustration">
-          <i className="fa fa-lock"></i>
+          <i class="fa fa-lock"></i>
         </div>
         <div className="form-group">
           <input
