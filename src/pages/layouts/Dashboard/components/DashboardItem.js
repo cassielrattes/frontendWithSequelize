@@ -6,7 +6,7 @@ const DashboardItem = ({ user }) => {
   async function handleDelete(data) {
     await api.delete(`/users/${data}`);
     logout();
-    window.location.reload(false);
+    // window.location.reload(false);
   }
 
   return (

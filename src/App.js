@@ -14,6 +14,7 @@ import Footer from "./pages/layouts/Footer";
 import Dashboard from "./pages/layouts/Dashboard";
 
 import "./global.css";
+import Home from "./pages/layouts/Home";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -36,6 +37,7 @@ const App = () => {
       <Router>
         <Navbar />
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <PrivateRoute exact path="/dashboard" component={Dashboard} />

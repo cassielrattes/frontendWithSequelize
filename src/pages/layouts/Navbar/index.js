@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import { isAuthenticated, logout } from "../../../services/auth";
+import logo from "../../../img/logo.png";
 
 const Navbar = () => {
   async function sair() {
@@ -46,7 +47,14 @@ const Navbar = () => {
       <div className="container">
         <h1>
           <Link className="navbar-brand" to="/">
-            <i className="fas fa-code"></i> Gustavo's Company
+            <img
+              src={logo}
+              width="50"
+              height="50"
+              alt=""
+              className="mr-2 logo"
+            />
+            Cotação De Gasto De Obra
           </Link>
         </h1>
         <button
